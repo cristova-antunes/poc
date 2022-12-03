@@ -1,0 +1,28 @@
+.nav {
+  padding-inline: var(--layout-padding);
+  background-color: var(--clr-3);
+}
+
+.nav ul {
+  padding: 0;
+  display: flex;
+  align-items: center;
+  gap: var(--space-m);
+}
+
+.nav li {
+  list-style: none;
+}
+
+.nav li:first-child {
+  flex: 1;
+}
+
+.nav * {
+  vertical-align: middle;
+}
+
+.nav__logo {
+  text-decoration-color: var(--clr-5);
+  text-decoration-line: underline;
+}

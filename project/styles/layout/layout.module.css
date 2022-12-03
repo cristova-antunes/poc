@@ -1,0 +1,18 @@
+.layout {
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+}
+
+.layout main {
+  padding-inline: var(--layout-padding);
+}
+
+.layout main:not(.is--home) {
+  padding-block: var(--space-l);
+}
+
+.layout h1 {
+  font-size: var(--font-size-xl);
+  margin-bottom: var(--space-m);
+}
