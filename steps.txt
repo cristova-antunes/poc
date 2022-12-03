@@ -1,0 +1,13 @@
+Next
+--
+1) instalação supabase
+2) css reset
+Google font
+
+CMS
+--
+1) Instalar plugin de documentação
+
+--
+
+https://next-auth.js.org/adapters/supabase
