@@ -135,3 +135,36 @@ a.btn {
   color: var(--clr-6);
   border: none;
 }
+
+fieldset {
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+
+fieldset legend {
+  font-size: var(--font-size-base);
+  margin-bottom: var(--space-base);
+  font-weight: 700;
+  color: var(--clr-6);
+}
+
+fieldset:not(:first-child) legend {
+  padding-top: var(--space-m);
+}
+
+form input {
+  margin-bottom: var(--space-base);
+  display: block;
+  height: 40px;
+  padding-inline: var(--space-s);
+}
+
+form input:focus {
+  outline-color: var(--clr-6);
+}
+
+label:has(+ input:focus) {
+  font-weight: 700;
+  color: var(--clr-6);
+}

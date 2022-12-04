@@ -1,13 +1,14 @@
-export interface _Btn {
+import { ButtonStyle } from "../../ts/enums/enums"
+
+export interface _Btn extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   children: React.ReactNode
-  onClick?: React.MouseEventHandler<HTMLButtonElement>
-  type: "default" | "primary" | "link"
+  btnStyle: ButtonStyle
 }
 
-export default function Btn({ children, type, onClick }: _Btn) {
+export default function Btn(props: _Btn) {
   return (
-    <button className={`btn btn-${type}`} onClick={onClick}>
-      {children}
+    <button className={`btn btn-${props.btnStyle}`} onClick={props.onClick}>
+      {props.children}
     </button>
   )
 }

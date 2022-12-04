@@ -2,6 +2,7 @@
 
 import Btn from "../../../components/ui/Btn"
 import { FormEvent, useRef } from "react"
+import { ButtonStyle } from "../../../ts/enums/enums"
 
 export default function page() {
   const userRef = useRef<HTMLInputElement | null>(null)
@@ -21,9 +22,9 @@ export default function page() {
           <label htmlFor="username">Username</label>
           <input type="text" name="username" id="username" ref={userRef} />
           <label htmlFor="password">Password</label>
-          <input type="text" name="password" id="password" ref={pwRef} />
+          <input type="password" name="password" id="password" ref={pwRef} />
         </fieldset>
-        <Btn type="primary">Sign up</Btn>
+        <Btn btnStyle={ButtonStyle.primary}>Sign up</Btn>
       </form>
     </>
   )

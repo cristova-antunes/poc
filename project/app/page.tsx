@@ -1,5 +1,6 @@
 import styles from "../styles/pages/homepage.module.css"
 import LinkBtn from "../components/ui/LinkBtn"
+import { ButtonStyle } from "../ts/enums/enums"
 
 export default function Home() {
   return (
@@ -10,10 +11,10 @@ export default function Home() {
         tempor incididunt ut labore et dolore magna aliqua.
       </p>
       <div className={styles.homepage__auth}>
-        <LinkBtn href={"/auth/register"} type="primary">
+        <LinkBtn href={"/auth/register"} btnStyle={ButtonStyle.primary}>
           Register
         </LinkBtn>
-        <LinkBtn href={"/auth/login"} type="link">
+        <LinkBtn href={"/auth/login"} btnStyle={ButtonStyle.link}>
           Login
         </LinkBtn>
       </div>

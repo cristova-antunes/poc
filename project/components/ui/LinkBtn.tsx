@@ -1,15 +1,14 @@
 import Link from "next/link"
+import { _Btn } from "./Btn"
 
-export interface _LinkBtn {
-  children: React.ReactNode
+export interface _LinkBtn extends _Btn {
   href: string
-  type: "default" | "primary" | "link"
 }
 
-export default function LinkBtn({ children, href, type }: _LinkBtn) {
+export default function LinkBtn(props: _LinkBtn) {
   return (
-    <Link href={href} className={`btn btn-${type}`}>
-      {children}
+    <Link href={props.href} className={`btn btn-${props.btnStyle}`}>
+      {props.children}
     </Link>
   )
 }
