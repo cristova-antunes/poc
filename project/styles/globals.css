@@ -149,6 +149,10 @@ fieldset legend {
   color: var(--clr-6);
 }
 
+fieldset:has(+ button) {
+  margin-bottom: var(--space-l);
+}
+
 fieldset:not(:first-child) legend {
   padding-top: var(--space-m);
 }
@@ -164,7 +168,11 @@ form input:focus {
   outline-color: var(--clr-6);
 }
 
+label {
+  transition: all 0.2s ease-in-out;
+}
+
 label:has(+ input:focus) {
-  font-weight: 700;
+  text-shadow: -1px 0 var(--clr-6);
   color: var(--clr-6);
 }

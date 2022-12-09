@@ -15,6 +15,7 @@
   font-size: var(--font-size-md);
   color: var(--clr-5);
   max-width: 50vw;
+  margin-inline: auto;
 }
 
 .homepage__auth {

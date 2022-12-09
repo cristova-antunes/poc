@@ -6,18 +6,18 @@ import { ButtonStyle } from "../../../ts/enums/enums"
 import { User, UserAuth } from "../../../ts/interfaces/User"
 
 export default function Page() {
-  const userRef = useRef<HTMLInputElement | null>(null)
-  const pwRef = useRef<HTMLInputElement | null>(null)
-  const name = useRef<HTMLInputElement | null>(null)
-  const email = useRef<HTMLInputElement | null>(null)
-  const address = useRef<HTMLInputElement | null>(null)
-  const birthday = useRef<HTMLInputElement | null>(null)
-  const phone = useRef<HTMLInputElement | null>(null)
+  const inputs = {
+    username: useRef<HTMLInputElement | null>(null),
+    password: useRef<HTMLInputElement | null>(null),
+    name: useRef<HTMLInputElement | null>(null),
+    email: useRef<HTMLInputElement | null>(null),
+    address: useRef<HTMLInputElement | null>(null),
+    birthday: useRef<HTMLInputElement | null>(null),
+    phone: useRef<HTMLInputElement | null>(null),
+  }
 
   const onSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault()
-
-    console.log({ userRef, pwRef, name, email, address, birthday, phone })
   }
 
   return (
@@ -27,17 +27,29 @@ export default function Page() {
         <fieldset>
           <legend>About you</legend>
           <label htmlFor="name">Full name</label>
-          <input type="text" name="name" id="name" ref={name} required />
+          <input type="text" name="name" id="name" ref={inputs.name} required />
           <label htmlFor="email">Email</label>
-          <input type="email" name="email" id="email" ref={email} required />
+          <input
+            type="email"
+            name="email"
+            id="email"
+            ref={inputs.email}
+            required
+          />
           <label htmlFor="phone">Phone</label>
-          <input type="tel" name="phone" id="phone" ref={phone} required />
+          <input
+            type="tel"
+            name="phone"
+            id="phone"
+            ref={inputs.phone}
+            required
+          />
           <label htmlFor="address">Address</label>
           <input
             type="text"
             name="address"
             id="address"
-            ref={address}
+            ref={inputs.address}
             required
           />
           <label htmlFor="birthday">Birthday</label>
@@ -45,7 +57,7 @@ export default function Page() {
             type="date"
             name="birthday"
             id="birthday"
-            ref={birthday}
+            ref={inputs.birthday}
             required
           />
         </fieldset>
@@ -57,7 +69,7 @@ export default function Page() {
             type="text"
             name="username"
             id="username"
-            ref={userRef}
+            ref={inputs.username}
             required
           />
           <label htmlFor="password">Password</label>
@@ -65,7 +77,7 @@ export default function Page() {
             type="password"
             name="password"
             id="password"
-            ref={pwRef}
+            ref={inputs.password}
             required
           />
         </fieldset>
